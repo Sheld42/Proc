@@ -22,4 +22,5 @@ void Out(shape *s, ofstream &ofst) {
 	default:
 		ofst << "Incorrect figure!" << endl;
 	}
+	ofst << "temperature = " << s->temperature << endl;
 }

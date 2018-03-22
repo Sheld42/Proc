@@ -6,4 +6,5 @@ struct shape {
 		enum type { BALL, PARALLELEPIPED, TETRAEDR };
 		type key; 
 		void* obj;
+		int temperature;
 };
