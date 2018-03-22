@@ -6,6 +6,7 @@ using namespace std;
 
 ball* InBall(ifstream &ist);
 parallelepiped* InParallelepiped(ifstream &ist);
+tetraedr* InTetraedr(ifstream &ist);
 
 shape* In(ifstream &ifst) {
 	shape *sp;
@@ -21,6 +22,11 @@ shape* In(ifstream &ifst) {
 		sp = new shape;
 		sp->key = shape::type::PARALLELEPIPED;
 		sp->obj = (void*)InParallelepiped(ifst);
+		return sp;
+	case 3:
+		sp = new shape;
+		sp->key = shape::type::TETRAEDR;
+		sp->obj = (void*)InTetraedr(ifst);
 		return sp;
 	default:
 		return NULL;
