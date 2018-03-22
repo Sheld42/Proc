@@ -9,6 +9,8 @@ void Clear(container &c);
 void In(container &c, ifstream &ifst);
 void Out(container &c, ofstream &ofst);
 void Sort(container &c);
+void OutBall(container &c, ofstream &ofst);
+void OutParallelepiped(container &c, ofstream &ofst);
 
 int main(int argc, char* argv[]) {
 	if (argc != 3) {
@@ -27,8 +29,7 @@ int main(int argc, char* argv[]) {
 	In(c, ifst);
 	ofst << "Filled container. " << endl;
 	Sort(c);
-	Out(c, ofst);
-	
+	OutBall(c, ofst);
 	Clear(c);
 	ofst << "Empty container. " << endl;
 	Out(c, ofst);
