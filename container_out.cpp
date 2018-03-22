@@ -7,11 +7,13 @@
 using namespace std;
 
 void Out(shape *s, ofstream &ofst);
+double Volume(shape *s);
 
 void Out(container &c, ofstream &ofst) {
 	ofst << "Container contains " << c.len << " elements." << endl;
 	for (int i = 0; i < c.len; i++) {
 		ofst << i + 1 << ": ";
 		Out((c.cont[i]), ofst);
+		ofst << "volume = " << Volume(c.cont[i]) << endl;
 	}
 }
