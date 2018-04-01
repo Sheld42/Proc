@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include "container.h"
+#include "gtest/gtest.h"
+#include "Test.h"
 
 using namespace std;
 
@@ -14,7 +16,7 @@ void OutParallelepiped(container &c, ofstream &ofst);
 void OutTetraedr(container &c, ofstream &ofst);
 
 int main(int argc, char* argv[]) {
-	if (argc != 3) {
+	/*if (argc != 3) {
 		cout << "incorrect command line! "
 			 "Waited: command infile outfile" << endl;
 		exit(1);
@@ -35,5 +37,7 @@ int main(int argc, char* argv[]) {
 	ofst << "Empty container. " << endl;
 	Out(c, ofst);
 	cout << "Stop" << endl;
-	return 0;
+	return 0;*/
+	::testing::InitGoogleTest(&argc, argv);
+	return RUN_ALL_TESTS();
 }

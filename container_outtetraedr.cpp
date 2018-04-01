@@ -12,7 +12,7 @@ void OutTetraedr(container &c, ofstream &ofst) {
 	ofst << "Only tetraedrs." << endl;
 	for (int i = 0; i < c.len; i++) {
 		if (c.cont[i]->key == shape::type::TETRAEDR) {
-			ofst << i << ": ";
+			ofst << i + 1 << ": ";
 			Out((c.cont[i]), ofst);
 		}
 		else

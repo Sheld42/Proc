@@ -4,5 +4,5 @@
 using namespace std;
 
 double Volume(tetraedr &t) {
-	return t.a*t.a*t.a;
+	return sqrt(2)*t.a*t.a*t.a / 12;
 }

@@ -12,7 +12,7 @@ void OutParallelepiped(container &c, ofstream &ofst) {
 	ofst << "Only parallelepipeds." << endl;
 	for (int i = 0; i < c.len; i++) {
 		if (c.cont[i]->key == shape::type::PARALLELEPIPED) {
-			ofst << i << ": ";
+			ofst << i + 1 << ": ";
 			Out((c.cont[i]), ofst);
 		}
 		else
