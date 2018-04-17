@@ -7,9 +7,16 @@
 using namespace std;
 
 void Out(shape *s, ofstream &ofst);
+void CheckOutputFile(ofstream &ofst);
 
 void OutTetraedr(container &c, ofstream &ofst) {
-	ofst << "Only tetraedrs." << endl;
+	CheckOutputFile(ofst);
+	if (c.len) {
+		ofst << "Container contains " << c.len << " elements." << endl;
+		ofst << "Only tetraedrs." << endl;
+	}
+	else
+		ofst << "Container is empty:\n";
 	for (int i = 0; i < c.len; i++) {
 		if (c.cont[i]->key == shape::type::TETRAEDR) {
 			ofst << i + 1 << ": ";
