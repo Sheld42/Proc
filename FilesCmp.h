@@ -4,12 +4,12 @@ using namespace std;
 
 bool FilesCmp(ifstream &expected, ifstream &actual) {
 	bool flag = true;
-	char ActTest;
-	char ExpTest;
+	char acttest;
+	char exptest;
 	while (!expected.eof()) {
-		expected >> ExpTest;
-		actual >> ActTest;
-		if (ExpTest != ActTest) {
+		expected >> exptest;
+		actual >> acttest;
+		if (exptest != acttest) {
 			flag = false;
 			break;
 		}
