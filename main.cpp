@@ -15,6 +15,7 @@ void Sort(container &c);
 void OutBall(container &c, ofstream &ofst);
 void OutParallelepiped(container &c, ofstream &ofst);
 void OutTetraedr(container &c, ofstream &ofst);
+void MultiMethod(container &c, ofstream &ofst);
 
 int main(int argc, char* argv[]) {
 	if (argc != 3) {
@@ -34,11 +35,7 @@ int main(int argc, char* argv[]) {
 	Init(c);
 	In(c, ifst);
 	ofst << "Filled container. " << endl;
-	Sort(c);
-	OutTetraedr(c, ofst);
-	Clear(c);
-	ofst << "Empty container. " << endl;
-	Out(c, ofst);
+	MultiMethod(c, ofst); 
 	cout << "Stop" << endl;
 	ifst.close();
 	ofst.close();
